@@ -1,0 +1,58 @@
+{
+  "Log to the console": {
+    "prefix": "log",
+    "body": ["console.log($1);", "$0"],
+    "description": "Log to the console"
+  },
+  "Log warning to console": {
+    "prefix": "warn",
+    "body": ["console.warn($1);", "$0"],
+    "description": "Log warning to the console"
+  },
+  "Log error to console": {
+    "prefix": "error",
+    "body": ["console.error($1);", "$0"],
+    "description": "Log error to the console"
+  },
+  "Throw Exception": {
+    "prefix": "throw",
+    "body": ["throw new Error(\"$1\");", "$0"],
+    "description": "Throw Exception"
+  },
+  "div": {
+          "prefix": "div",
+          "body": "<div>${0}</div>"
+        },
+        "span": {
+          "prefix": "span",
+          "body": "<span>${0}</span>"
+        },
+        "a": {
+          "prefix": "a",
+          "body": "<a href=\"$1\">${2:Link}</a>"
+        },
+        "img": {
+          "prefix": "img",
+          "body": "<img src=\"$1\" alt=\"$2\" />"
+        },
+        "button": {
+          "prefix": "button",
+          "body": "<button onClick={$1}>${0}</button>"
+        },
+        "input": {
+          "prefix": "input",
+          "body": "<input type=\"$1\" name=\"$2\" id=\"$3\" />"
+        },
+        "useState": {
+          "prefix": "useState",
+          "body": "const [$1, set$1] = useState<$2>($3);"
+        },
+        "useEffect": {
+          "prefix": "useEffect",
+          "body": "useEffect(() => {\n  $0\n}, [$1]);"
+        },
+        "component": {
+          "prefix": "component",
+          "body": "const $1: React.FC = () => {\n  return (\n    <div>\n      $0\n    </div>\n  );\n};\n\nexport default $1;"
+        }
+}

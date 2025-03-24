@@ -1,0 +1,34 @@
+[
+    {
+        "context": "Editor",
+        "bindings": {
+            "super-space": "editor::ShowCompletions",
+            "super-d": "editor::GoToDefinition",
+            "super-r": "editor::Rename",
+            "super-h": "pane::ActivatePrevItem",
+            "super-l": "pane::ActivateNextItem",
+            "super-shift-h": "pane::SwapItemLeft",
+            "super-shift-l": "pane::SwapItemRight",
+            "alt-h": "project_panel::ToggleFocus",
+            "alt-j": "terminal_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "alt-k": "terminal_panel::ToggleFocus",
+            "alt-h": "project_panel::ToggleFocus",
+            "super-h": "pane::ActivatePrevItem",
+            "super-l": "pane::ActivateNextItem",
+            "super-shift-h": "pane::SwapItemLeft",
+            "super-shift-l": "pane::SwapItemRight"
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "alt-l": "project_panel::ToggleFocus",
+            "alt-j": "terminal_panel::ToggleFocus"
+        }
+    }
+]

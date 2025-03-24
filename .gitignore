@@ -1,0 +1,9 @@
+# Zed folders
+embeddings
+conversations
+prompts
+
+# Temporary / Platform-specific files
+.tmp*
+.DS_Store
+

@@ -1,0 +1,103 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    // Zed
+    "features": {
+        "copilot": false,
+        "edit_prediction_provider": "none"
+    },
+
+    // Editor
+    "vim_mode": true,
+    "vim": {
+        "use_system_clipboard": "always"
+    },
+    "relative_line_numbers": true,
+    "remove_trailing_whitespace_on_save": true,
+    "base_keymap": "JetBrains",
+    "preferred_line_length": 120,
+    "wrap_guides": [120],
+    "theme": {
+        "light": "Ayu Light",
+        "dark": "Catppuccin Frappé",
+        "mode": "system"
+    },
+    "buffer_line_height": {
+        "custom": 1.4
+    },
+    "tab_size": 4,
+    "buffer_font_size": 18,
+    "buffer_font_family": "Ubuntu Mono",
+
+    // Languages and LSPs
+    "vtsls": {
+        "initialization_options": {
+            "typescript": {
+                "preferences": {
+                    "importModuleSpecifier": "non-relative"
+                }
+            }
+        }
+    },
+    "lsp": {
+        "vtsls": {
+            "settings": {
+                // For TypeScript:
+                "typescript": {
+                    "tsserver": { "maxTsServerMemory": 16184 },
+                    "inlayHints": {
+                        "parameterNames": {
+                            "enabled": "none",
+                            "suppressWhenArgumentMatchesName": true
+                        },
+                        "parameterTypes": { "enabled": true },
+                        "variableTypes": {
+                            "enabled": false,
+                            "suppressWhenTypeMatchesName": true
+                        },
+                        "propertyDeclarationTypes": { "enabled": true },
+                        "functionLikeReturnTypes": { "enabled": true },
+                        "enumMemberValues": { "enabled": true }
+                    }
+                },
+                // For JavaScript:
+                "javascript": { "tsserver": { "maxTsServerMemory": 16184 } }
+            }
+        }
+    },
+    "languages": {
+        "TypeScript": {
+            "formatter": "prettier",
+            "code_actions_on_format": {
+                "source.removeUnusedImports": true,
+                "source.fixAll.eslint": true,
+                "source.organizeImports": true
+            },
+            "format_on_save": "on"
+        },
+        "TSX": {
+            "formatter": "prettier",
+            "code_actions_on_format": {
+                "source.removeUnusedImports": true,
+                "source.fixAll.eslint": true,
+                "source.organizeImports": true
+            },
+            "format_on_save": "on"
+        },
+        "JavaScript": {
+            "formatter": "prettier",
+            "code_actions_on_format": {
+                "source.removeUnusedImports": true,
+                "source.fixAll.eslint": true,
+                "source.organizeImports": true
+            },
+            "format_on_save": "on"
+        }
+    }
+}
