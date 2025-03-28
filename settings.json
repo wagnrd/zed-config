@@ -12,6 +12,17 @@
         "copilot": false,
         "edit_prediction_provider": "none"
     },
+    "diagnostics": {
+        "include_warnings": true,
+        "inline": {
+            "enabled": true,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null
+        }
+    },
+    "restore_on_startup": "last_workspace",
 
     // Editor
     "vim_mode": true,
@@ -36,21 +47,14 @@
     "buffer_font_family": "Ubuntu Mono",
 
     // Languages and LSPs
-    "vtsls": {
-        "initialization_options": {
-            "typescript": {
-                "preferences": {
-                    "importModuleSpecifier": "non-relative"
-                }
-            }
-        }
-    },
     "lsp": {
         "vtsls": {
             "settings": {
-                // For TypeScript:
                 "typescript": {
                     "tsserver": { "maxTsServerMemory": 16184 },
+                    "preferences": {
+                        "importModuleSpecifier": "non-relative"
+                    },
                     "inlayHints": {
                         "parameterNames": {
                             "enabled": "none",
@@ -66,7 +70,6 @@
                         "enumMemberValues": { "enabled": true }
                     }
                 },
-                // For JavaScript:
                 "javascript": { "tsserver": { "maxTsServerMemory": 16184 } }
             }
         }
