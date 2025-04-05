@@ -1,34 +1,75 @@
 [
     {
-        "context": "Editor",
         "bindings": {
-            "super-space": "editor::ShowCompletions",
-            "super-d": "editor::GoToDefinition",
-            "super-r": "editor::Rename",
-            "super-h": "pane::ActivatePrevItem",
-            "super-l": "pane::ActivateNextItem",
-            "super-shift-h": "pane::SwapItemLeft",
-            "super-shift-l": "pane::SwapItemRight",
-            "alt-h": "project_panel::ToggleFocus",
-            "alt-j": "terminal_panel::ToggleFocus"
+            "shift shift": "file_finder::Toggle",
+            "alt-t": "terminal_panel::ToggleFocus",
+            "shift-alt-t": "workspace::ToggleBottomDock",
+            "alt-e": "project_panel::ToggleFocus",
+            "shift-alt-e": "workspace::ToggleLeftDock",
+            "alt-g": "git_panel::ToggleFocus",
+            "shift-alt-g": "workspace::ToggleLeftDock"
         }
     },
     {
-        "context": "Terminal",
+        "context": "Editor && os != macos",
         "bindings": {
-            "alt-k": "terminal_panel::ToggleFocus",
-            "alt-h": "project_panel::ToggleFocus",
-            "super-h": "pane::ActivatePrevItem",
-            "super-l": "pane::ActivateNextItem",
-            "super-shift-h": "pane::SwapItemLeft",
-            "super-shift-l": "pane::SwapItemRight"
+            "ctrl-space": "editor::ShowCompletions",
+            "ctrl-d": "editor::GoToDefinition",
+            "ctrl-r": "editor::Rename",
+            "ctrl-f": "editor::FindAllReferences",
+            "ctrl-h": "pane::ActivatePreviousItem",
+            "ctrl-l": "pane::ActivateNextItem",
+            "ctrl-shift-h": "pane::SwapItemLeft",
+            "ctrl-shift-l": "pane::SwapItemRight"
         }
     },
     {
-        "context": "Workspace",
+        "context": "Editor && os == macos",
         "bindings": {
-            "alt-l": "project_panel::ToggleFocus",
-            "alt-j": "terminal_panel::ToggleFocus"
+            "cmd-space": "editor::ShowCompletions",
+            "cmd-d": "editor::GoToDefinition",
+            "cmd-f": "editor::FindAllReferences",
+            "cmd-r": "editor::Rename",
+            "cmd-h": "pane::ActivatePreviousItem",
+            "cmd-l": "pane::ActivateNextItem",
+            "cmd-shift-h": "pane::SwapItemLeft",
+            "cmd-shift-l": "pane::SwapItemRight"
+        }
+    },
+    {
+        "context": "Terminal && os != macos",
+        "bindings": {
+            "ctrl-n": "workspace::NewTerminal"
+        }
+    },
+    {
+        "context": "Terminal && os == macos",
+        "bindings": {
+            "cmd-n": "workspace::NewTerminal"
+        }
+    },
+    {
+        "context": "Terminal && os == macos",
+        "bindings": {
+            "cmd-n": "workspace::NewTerminal"
+        }
+    },
+    {
+        "context": "ProjectPanel && os != macos",
+        "bindings": {
+            "ctrl-n": "project_panel::NewFile",
+            "ctrl-f": "project_panel::NewDirectory",
+            "ctrl-d": "project_panel::Delete",
+            "ctrl-r": "project_panel::Rename"
+        }
+    },
+    {
+        "context": "ProjectPanel && os == macos",
+        "bindings": {
+            "cmd-n": "project_panel::NewFile",
+            "cmd-f": "project_panel::NewDirectory",
+            "cmd-d": "project_panel::Delete",
+            "cmd-r": "project_panel::Rename"
         }
     }
 ]
