@@ -2,6 +2,7 @@
     {
         "bindings": {
             "shift shift": "file_finder::Toggle",
+            "alt-b": "git::Branch",
             "alt-t": "terminal_panel::ToggleFocus",
             "shift-alt-t": "workspace::ToggleBottomDock",
             "alt-e": "project_panel::ToggleFocus",
@@ -14,6 +15,7 @@
         "context": "Editor && os != macos",
         "bindings": {
             "ctrl-space": "editor::ShowCompletions",
+            "ctrl-p": "editor::ShowSignatureHelp",
             "ctrl-d": "editor::GoToDefinition",
             "ctrl-r": "editor::Rename",
             "ctrl-f": "editor::FindAllReferences",
@@ -27,6 +29,7 @@
         "context": "Editor && os == macos",
         "bindings": {
             "cmd-space": "editor::ShowCompletions",
+            "cmd-p": "editor::ShowSignatureHelp",
             "cmd-d": "editor::GoToDefinition",
             "cmd-f": "editor::FindAllReferences",
             "cmd-r": "editor::Rename",

@@ -12,6 +12,7 @@
         "copilot": false,
         "edit_prediction_provider": "none"
     },
+    "snippet_sort_order": "top",
     "diagnostics": {
         "include_warnings": true,
         "inline": {
