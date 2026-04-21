@@ -8,45 +8,17 @@
 // from the command palette or from `Zed` application menu.
 {
     // Zed
-    "terminal": {
-        "cursor_shape": "bar",
-    },
-    "project_panel": {
-        "dock": "left",
-    },
-    "outline_panel": {
-        "dock": "left",
-    },
-    "collaboration_panel": {
-        "dock": "left",
-    },
-    "git_panel": {
-        "dock": "left",
-    },
-    "language_models": {
-        "lmstudio": {
-            "api_url": "http://localhost:1234/api/v0",
-        },
-    },
     "agent": {
-        "dock": "right",
-        "tool_permissions": {
-            "tools": {
-                "create_directory": {
-                    "default": "allow",
-                },
-            },
-        },
-        "default_profile": "write",
+        "enable_feedback": false,
+        "default_model": {
+            "provider": "lmstudio",
+            "model": "openai/gpt-oss-20b"
+        }
     },
-    "agent_servers": {
-        "opencode": {
-            "type": "registry",
-        },
-        "cursor": {
-            "type": "registry",
-        },
+    "edit_predictions": {
+        "mode": "subtle"
     },
+    "disable_ai": false,
     "snippet_sort_order": "top",
     "diagnostics": {
         "include_warnings": true,
@@ -55,28 +27,28 @@
             "update_debounce_ms": 150,
             "padding": 4,
             "min_column": 0,
-            "max_severity": null,
-        },
+            "max_severity": null
+        }
     },
     "restore_on_startup": "last_workspace",
 
     // Editor
     "vim_mode": true,
     "vim": {
-        "use_system_clipboard": "always",
+        "use_system_clipboard": "always"
     },
-    "relative_line_numbers": "enabled",
+    "relative_line_numbers": true,
     "remove_trailing_whitespace_on_save": true,
     "base_keymap": "JetBrains",
     "preferred_line_length": 120,
     "wrap_guides": [120],
     "theme": {
-        "light": "Ayu Light Italic",
+        "light": "Ayu Light",
         "dark": "Catppuccin Frappé",
-        "mode": "system",
+        "mode": "system"
     },
     "buffer_line_height": {
-        "custom": 1.4,
+        "custom": 1.4
     },
     "tab_size": 4,
     "buffer_font_size": 18,
@@ -90,85 +62,78 @@
                 "typescript": {
                     "tsserver": { "maxTsServerMemory": 16184 },
                     "preferences": {
-                        "importModuleSpecifier": "non-relative",
+                        "importModuleSpecifier": "non-relative"
                     },
                     "inlayHints": {
                         "parameterNames": {
                             "enabled": "none",
-                            "suppressWhenArgumentMatchesName": true,
+                            "suppressWhenArgumentMatchesName": true
                         },
                         "parameterTypes": { "enabled": true },
                         "variableTypes": {
                             "enabled": false,
-                            "suppressWhenTypeMatchesName": true,
+                            "suppressWhenTypeMatchesName": true
                         },
                         "propertyDeclarationTypes": { "enabled": true },
                         "functionLikeReturnTypes": { "enabled": true },
-                        "enumMemberValues": { "enabled": true },
-                    },
+                        "enumMemberValues": { "enabled": true }
+                    }
                 },
-                "javascript": { "tsserver": { "maxTsServerMemory": 16184 } },
-            },
+                "javascript": { "tsserver": { "maxTsServerMemory": 16184 } }
+            }
         },
         "codebook": {
             "initialization_options": {
                 "min_word_length": 3,
-                "dictionaries": ["en_us", "en_gb", "de"],
-            },
-        },
-        "rust-analyzer": {
-            "initialization_options": {
-                "check": {
-                    "command": "clippy",
-                },
-            },
-        },
+                "dictionaries": ["en_us", "en_gb", "de"]
+            }
+        }
     },
     "languages": {
         "TypeScript": {
             "formatter": [
                 {
-                    "code_action": "source.removeUnusedImports",
+                    "code_action": "source.removeUnusedImports"
                 },
                 {
-                    "code_action": "source.fixAll.eslint",
+                    "code_action": "source.fixAll.eslint"
                 },
                 {
-                    "code_action": "source.organizeImports",
+                    "code_action": "source.organizeImports"
                 },
-                "prettier",
+                "prettier"
             ],
-            "format_on_save": "on",
+            "format_on_save": "on"
         },
         "TSX": {
             "formatter": [
                 {
-                    "code_action": "source.removeUnusedImports",
+                    "code_action": "source.removeUnusedImports"
                 },
                 {
-                    "code_action": "source.fixAll.eslint",
+                    "code_action": "source.fixAll.eslint"
                 },
                 {
-                    "code_action": "source.organizeImports",
+                    "code_action": "source.organizeImports"
                 },
-                "prettier",
+                "prettier"
             ],
-            "format_on_save": "on",
+            "format_on_save": "on"
         },
         "JavaScript": {
             "formatter": [
                 {
-                    "code_action": "source.removeUnusedImports",
+                    "code_action": "source.removeUnusedImports"
                 },
                 {
-                    "code_action": "source.fixAll.eslint",
+                    "code_action": "source.fixAll.eslint"
                 },
                 {
-                    "code_action": "source.organizeImports",
+                    "code_action": "source.organizeImports"
                 },
-                "prettier",
+                "prettier"
             ],
-            "format_on_save": "on",
-        },
-    },
+            "format_on_save": "on"
+        }
+    }
 }

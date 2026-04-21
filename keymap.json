@@ -74,5 +74,11 @@
             "cmd-d": "project_panel::Delete",
             "cmd-r": "project_panel::Rename"
         }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-f": "pane::DeploySearch"
+        }
     }
 ]
