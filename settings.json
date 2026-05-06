@@ -8,6 +8,12 @@
 // from the command palette or from `Zed` application menu.
 {
     // Zed
+    "cli_default_open_behavior": "new_window",
+    "icon_theme": {
+        "mode": "light",
+        "light": "Zed (Default)",
+        "dark": "Zed (Default)",
+    },
     "terminal": {
         "cursor_shape": "bar",
     },
@@ -29,6 +35,7 @@
         },
     },
     "agent": {
+        "sidebar_side": "right",
         "dock": "right",
         "tool_permissions": {
             "tools": {
@@ -40,6 +47,22 @@
         "default_profile": "write",
     },
     "agent_servers": {
+        "codex-acp": {
+            "favorite_config_option_values": {
+                "reasoning_effort": ["high"],
+            },
+            "type": "registry",
+        },
+        "claude-acp": {
+            "default_config_options": {
+                "effort": "xhigh",
+                "model": "opus[1m]",
+            },
+            "type": "registry",
+        },
+        "junie": {
+            "type": "registry",
+        },
         "opencode": {
             "type": "registry",
         },
@@ -122,53 +145,6 @@
                     "command": "clippy",
                 },
             },
-        },
-    },
-    "languages": {
-        "TypeScript": {
-            "formatter": [
-                {
-                    "code_action": "source.removeUnusedImports",
-                },
-                {
-                    "code_action": "source.fixAll.eslint",
-                },
-                {
-                    "code_action": "source.organizeImports",
-                },
-                "prettier",
-            ],
-            "format_on_save": "on",
-        },
-        "TSX": {
-            "formatter": [
-                {
-                    "code_action": "source.removeUnusedImports",
-                },
-                {
-                    "code_action": "source.fixAll.eslint",
-                },
-                {
-                    "code_action": "source.organizeImports",
-                },
-                "prettier",
-            ],
-            "format_on_save": "on",
-        },
-        "JavaScript": {
-            "formatter": [
-                {
-                    "code_action": "source.removeUnusedImports",
-                },
-                {
-                    "code_action": "source.fixAll.eslint",
-                },
-                {
-                    "code_action": "source.organizeImports",
-                },
-                "prettier",
-            ],
-            "format_on_save": "on",
         },
     },
 }

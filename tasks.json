@@ -1,10 +1,10 @@
 [
     {
         "label": "Open config folder",
-        "command": "Z=~/.var/app/dev.zed.Zed/config/zed; [ -d \"$Z\" ] || Z=~/.config/zed; cd $Z && command -v zsh >/dev/null 2>&1 && zsh || command -v bash >/dev/null 2>&1 && bash || command -v sh >/dev/null 2>&1 && sh",
+        "command": "zed-preview --classic ~/.config/zed",
     },
     {
         "label": "Sync config folder",
-        "command": "Z=~/.var/app/dev.zed.Zed/config/zed; [ -d \"$Z\" ] || Z=~/.config/zed; cd $Z && git pull && git add . && git commit -m \"sync\" && git push && echo \"Config folder synced successfully\"",
+        "command": "cd ~/.config/zed && git pull && git add . && git commit -m \"sync\" && git push && echo \"Config folder synced successfully\"",
     },
 ]
