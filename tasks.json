@@ -1,7 +1,7 @@
 [
     {
         "label": "Open config folder",
-        "command": "zed-preview --classic ~/.config/zed",
+        "command": "command -v zed-preview >/dev/null && zed-preview --classic ~/.config/zed || zed --classic ~/.config/zed",
     },
     {
         "label": "Sync config folder",
