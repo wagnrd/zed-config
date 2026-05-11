@@ -35,6 +35,11 @@
         },
     },
     "agent": {
+        "default_model": {
+            "provider": "lmstudio",
+            "model": "mellum-4b-dpo-all",
+            "enable_thinking": false,
+        },
         "sidebar_side": "right",
         "dock": "right",
         "tool_permissions": {
