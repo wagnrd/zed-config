@@ -1,4 +1,5 @@
 [
+    // General
     {
         "bindings": {
             "shift shift": "file_finder::Toggle",
@@ -8,9 +9,12 @@
             "alt-e": "project_panel::ToggleFocus",
             "shift-alt-e": "workspace::ToggleLeftDock",
             "alt-g": "git_panel::ToggleFocus",
-            "shift-alt-g": "workspace::ToggleLeftDock"
-        }
+            "shift-alt-g": "workspace::ToggleLeftDock",
+            "alt-a": "agent::ToggleFocus",
+            "shift-alt-a": "workspace::ToggleRightDock",
+        },
     },
+    // Linux
     {
         "context": "Editor && os != macos",
         "bindings": {
@@ -22,9 +26,25 @@
             "ctrl-h": "pane::ActivatePreviousItem",
             "ctrl-l": "pane::ActivateNextItem",
             "ctrl-shift-h": "pane::SwapItemLeft",
-            "ctrl-shift-l": "pane::SwapItemRight"
-        }
+            "ctrl-shift-l": "pane::SwapItemRight",
+        },
     },
+    {
+        "context": "Terminal && os != macos",
+        "bindings": {
+            "ctrl-n": "workspace::NewTerminal",
+        },
+    },
+    {
+        "context": "ProjectPanel && os != macos",
+        "bindings": {
+            "ctrl-n": "project_panel::NewFile",
+            "ctrl-f": "project_panel::NewDirectory",
+            "ctrl-d": "project_panel::Delete",
+            "ctrl-r": "project_panel::Rename",
+        },
+    },
+    // MacOS
     {
         "context": "Editor && os == macos",
         "bindings": {
@@ -36,35 +56,14 @@
             "cmd-h": "pane::ActivatePreviousItem",
             "cmd-l": "pane::ActivateNextItem",
             "cmd-shift-h": "pane::SwapItemLeft",
-            "cmd-shift-l": "pane::SwapItemRight"
-        }
-    },
-    {
-        "context": "Terminal && os != macos",
-        "bindings": {
-            "ctrl-n": "workspace::NewTerminal"
-        }
+            "cmd-shift-l": "pane::SwapItemRight",
+        },
     },
     {
         "context": "Terminal && os == macos",
         "bindings": {
-            "cmd-n": "workspace::NewTerminal"
-        }
-    },
-    {
-        "context": "Terminal && os == macos",
-        "bindings": {
-            "cmd-n": "workspace::NewTerminal"
-        }
-    },
-    {
-        "context": "ProjectPanel && os != macos",
-        "bindings": {
-            "ctrl-n": "project_panel::NewFile",
-            "ctrl-f": "project_panel::NewDirectory",
-            "ctrl-d": "project_panel::Delete",
-            "ctrl-r": "project_panel::Rename"
-        }
+            "cmd-n": "workspace::NewTerminal",
+        },
     },
     {
         "context": "ProjectPanel && os == macos",
@@ -72,13 +71,7 @@
             "cmd-n": "project_panel::NewFile",
             "cmd-f": "project_panel::NewDirectory",
             "cmd-d": "project_panel::Delete",
-            "cmd-r": "project_panel::Rename"
-        }
+            "cmd-r": "project_panel::Rename",
+        },
     },
-    {
-        "context": "Workspace",
-        "bindings": {
-            "cmd-f": "pane::DeploySearch"
-        }
-    }
 ]
