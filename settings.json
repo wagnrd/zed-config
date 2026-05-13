@@ -89,6 +89,12 @@
         },
     },
     "restore_on_startup": "last_workspace",
+    "inlay_hints": {
+        "toggle_on_modifiers_press": {
+            "control": true,
+            "shift": true,
+        },
+    },
 
     // Editor
     "vim_mode": true,
@@ -124,7 +130,32 @@
                     },
                     "inlayHints": {
                         "parameterNames": {
-                            "enabled": "none",
+                            "enabled": false,
+                            "suppressWhenArgumentMatchesName": true,
+                        },
+                        "parameterTypes": { "enabled": true },
+                        "variableTypes": {
+                            "enabled": false,
+                            "suppressWhenTypeMatchesName": true,
+                        },
+                        "propertyDeclarationTypes": { "enabled": true },
+                        "functionLikeReturnTypes": { "enabled": true },
+                        "enumMemberValues": { "enabled": true },
+                    },
+                },
+                "javascript": { "tsserver": { "maxTsServerMemory": 16184 } },
+            },
+        },
+        "tsgo": {
+            "settings": {
+                "typescript": {
+                    "tsserver": { "maxTsServerMemory": 16184 },
+                    "preferences": {
+                        "importModuleSpecifier": "non-relative",
+                    },
+                    "inlayHints": {
+                        "parameterNames": {
+                            "enabled": false,
                             "suppressWhenArgumentMatchesName": true,
                         },
                         "parameterTypes": { "enabled": true },
