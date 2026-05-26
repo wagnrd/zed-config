@@ -10,13 +10,7 @@
     // Zed
     "diff_view_style": "unified",
     "agent_buffer_font_size": 14.0,
-    "current_line_highlight": "gutter",
     "cli_default_open_behavior": "new_window",
-    "icon_theme": {
-        "mode": "light",
-        "light": "Zed (Default)",
-        "dark": "Zed (Default)",
-    },
     "terminal": {
         "cursor_shape": "bar",
     },
@@ -42,7 +36,7 @@
     "agent": {
         "default_model": {
             "provider": "lmstudio",
-            "model": "mellum-4b-dpo-all",
+            "model": "gemma-4-e2b-it",
             "enable_thinking": false,
         },
         "sidebar_side": "right",
@@ -80,24 +74,7 @@
             "type": "registry",
         },
     },
-    "snippet_sort_order": "top",
-    "diagnostics": {
-        "include_warnings": true,
-        "inline": {
-            "enabled": true,
-            "update_debounce_ms": 150,
-            "padding": 4,
-            "min_column": 0,
-            "max_severity": null,
-        },
-    },
     "restore_on_startup": "last_workspace",
-    "inlay_hints": {
-        "toggle_on_modifiers_press": {
-            "control": true,
-            "shift": true,
-        },
-    },
 
     // Editor
     "vim_mode": true,
@@ -111,8 +88,13 @@
     "wrap_guides": [120],
     "theme": {
         "light": "Ayu Light Italic",
-        "dark": "Catppuccin Frappé",
+        "dark": "Ayu Mirage",
+        "mode": "light",
+    },
+    "icon_theme": {
         "mode": "system",
+        "light": "Colored Zed Icons Theme Light",
+        "dark": "Colored Zed Icons Theme Dark",
     },
     "buffer_line_height": {
         "custom": 1.3,
@@ -121,6 +103,24 @@
     "buffer_font_size": 17,
     "buffer_font_family": "Ubuntu Mono",
     "autosave": "on_focus_change",
+    "inlay_hints": {
+        "toggle_on_modifiers_press": {
+            "control": true,
+            "shift": true,
+        },
+    },
+    "snippet_sort_order": "top",
+    "current_line_highlight": "gutter",
+    "diagnostics": {
+        "include_warnings": true,
+        "inline": {
+            "enabled": true,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null,
+        },
+    },
 
     // Languages and LSPs
     "lsp": {

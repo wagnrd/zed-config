@@ -12,6 +12,8 @@
             "shift-alt-g": "workspace::ToggleLeftDock",
             "alt-a": "agent::ToggleFocus",
             "shift-alt-a": "workspace::ToggleRightDock",
+            "space g e": "editor::GoToDiagnostic",
+            "space g p": "editor::GoToPreviousDiagnostic",
         },
     },
     // Linux
