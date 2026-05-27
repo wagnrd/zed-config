@@ -12,6 +12,11 @@
             "shift-alt-g": "workspace::ToggleLeftDock",
             "alt-a": "agent::ToggleFocus",
             "shift-alt-a": "workspace::ToggleRightDock",
+        },
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
             "space g e": "editor::GoToDiagnostic",
             "space g p": "editor::GoToPreviousDiagnostic",
         },
