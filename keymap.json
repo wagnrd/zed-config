@@ -3,6 +3,7 @@
     {
         "bindings": {
             "shift shift": "file_finder::Toggle",
+            "alt alt": "project_symbols::Toggle",
             "alt-b": "git::Branch",
             "alt-t": "terminal_panel::ToggleFocus",
             "shift-alt-t": "workspace::ToggleBottomDock",
@@ -40,6 +41,10 @@
         "context": "Terminal && os != macos",
         "bindings": {
             "ctrl-n": "workspace::NewTerminal",
+            "ctrl-h": "pane::ActivatePreviousItem",
+            "ctrl-l": "pane::ActivateNextItem",
+            "ctrl-shift-h": "pane::SwapItemLeft",
+            "ctrl-shift-l": "pane::SwapItemRight",
         },
     },
     {
@@ -70,6 +75,10 @@
         "context": "Terminal && os == macos",
         "bindings": {
             "cmd-n": "workspace::NewTerminal",
+            "cmd-h": "pane::ActivatePreviousItem",
+            "cmd-l": "pane::ActivateNextItem",
+            "cmd-shift-h": "pane::SwapItemLeft",
+            "cmd-shift-l": "pane::SwapItemRight",
         },
     },
     {

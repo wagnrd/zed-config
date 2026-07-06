@@ -8,8 +8,21 @@
 // from the command palette or from `Zed` application menu.
 {
     // Zed
+    "ui_font_size": 17.0,
+    "context_servers": {
+        "svelte-mcp": {
+            "enabled": true,
+            "remote": false,
+            "settings": {},
+        },
+        "mcp-server-grafana": {
+            "enabled": true,
+            "remote": false,
+            "settings": {},
+        },
+    },
     "diff_view_style": "unified",
-    "agent_buffer_font_size": 14.0,
+    "agent_buffer_font_size": 16.0,
     "cli_default_open_behavior": "new_window",
     "terminal": {
         "cursor_shape": "bar",
@@ -24,6 +37,7 @@
         "dock": "left",
     },
     "git_panel": {
+        "group_by": "none",
         "dock": "left",
         "file_icons": true,
         "tree_view": true,
@@ -52,6 +66,12 @@
     },
     "agent_servers": {
         "codex-acp": {
+            "default_config_options": {
+                "fast-mode": "off",
+                "model": "gpt-5.5",
+                "reasoning_effort": "xhigh",
+                "mode": "agent",
+            },
             "favorite_config_option_values": {
                 "reasoning_effort": ["high"],
             },
@@ -64,13 +84,17 @@
             },
             "type": "registry",
         },
-        "junie": {
-            "type": "registry",
-        },
         "opencode": {
             "type": "registry",
         },
         "cursor": {
+            "default_config_options": {
+                "thinking": "false",
+                "effort": "medium",
+                "context": "200k",
+                "model": "claude-opus-4-6",
+                "mode": "agent",
+            },
             "type": "registry",
         },
     },
@@ -100,7 +124,7 @@
         "custom": 1.3,
     },
     "tab_size": 4,
-    "buffer_font_size": 17,
+    "buffer_font_size": 18,
     "buffer_font_family": "Ubuntu Mono",
     "autosave": "on_focus_change",
     "inlay_hints": {
