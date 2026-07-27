@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
     // Zed
-    "ui_font_size": 17.0,
+    "ui_font_size": 16.0,
     "context_servers": {
         "svelte-mcp": {
             "enabled": true,
@@ -85,6 +85,10 @@
             "type": "registry",
         },
         "opencode": {
+            "default_config_options": {
+                "effort": "max",
+                "model": "opencode/deepseek-v4-flash-free"
+            },
             "type": "registry",
         },
         "cursor": {
