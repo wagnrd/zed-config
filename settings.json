@@ -9,19 +9,7 @@
 {
     // Zed
     "ui_font_size": 17.0,
-    "context_servers": {
-        "svelte-mcp": {
-            "enabled": true,
-            "remote": false,
-            "settings": {},
-        },
-        "mcp-server-grafana": {
-            "enabled": true,
-            "remote": false,
-            "settings": {},
-        },
-    },
-    "diff_view_style": "unified",
+    "diff_view_style": "split",
     "agent_buffer_font_size": 16.0,
     "cli_default_open_behavior": "new_window",
     "terminal": {
@@ -47,10 +35,26 @@
             "api_url": "http://localhost:1234/api/v0",
         },
     },
+    "restore_on_startup": "last_workspace",
+    "lsp_results_location": "picker",
+    "preview_tabs": {
+        "enabled": true,
+    },
+
+    // AI
+    "edit_predictions": {
+        "provider": "zed",
+        "open_ai_compatible_api": {
+            "api_url": "http://localhost:1234/v1/completions",
+            "model": "sweep-next-edit-1.5B",
+            "prompt_format": "sweep",
+            "max_output_tokens": 512
+        }
+    },
     "agent": {
         "default_model": {
             "provider": "lmstudio",
-            "model": "gemma-4-e2b-it",
+            "model": "google/gemma-4-26b-a4b-qat",
             "enable_thinking": false,
         },
         "sidebar_side": "right",
@@ -62,14 +66,27 @@
                 },
             },
         },
-        "default_profile": "write",
+        "default_profile": "ask",
+    },
+    "context_servers": {
+        "svelte-mcp": {
+            "enabled": true,
+            "remote": false,
+            "settings": {},
+        },
+        "mcp-server-grafana": {
+            "enabled": true,
+            "remote": false,
+            "settings": {},
+        },
     },
     "agent_servers": {
         "codex-acp": {
             "default_config_options": {
-                "fast-mode": "off",
-                "model": "gpt-5.5",
-                "reasoning_effort": "xhigh",
+                "collaboration_mode": "default",
+                "fast-mode": false,
+                "model": "gpt-5.6-terra",
+                "reasoning_effort": "high",
                 "mode": "agent",
             },
             "favorite_config_option_values": {
@@ -79,26 +96,32 @@
         },
         "claude-acp": {
             "default_config_options": {
+                "mode": "auto",
                 "effort": "xhigh",
                 "model": "opus[1m]",
             },
             "type": "registry",
         },
         "opencode": {
+            "default_config_options": {
+                "effort": "max",
+                "model": "opencode/deepseek-v4-flash-free",
+                "mode": "build"
+            },
             "type": "registry",
         },
         "cursor": {
             "default_config_options": {
-                "thinking": "false",
-                "effort": "medium",
-                "context": "200k",
-                "model": "claude-opus-4-6",
+                "fast": "false",
+                "thinking": "true",
+                "effort": "xhigh",
+                "context": "300k",
+                "model": "claude-fable-5-1",
                 "mode": "agent",
             },
             "type": "registry",
         },
     },
-    "restore_on_startup": "last_workspace",
 
     // Editor
     "vim_mode": true,
@@ -148,7 +171,7 @@
 
     // Languages and LSPs
     "lsp": {
-        "vtsls": {
+        "typescript-ls": {
             "settings": {
                 "typescript": {
                     "tsserver": { "maxTsServerMemory": 16184 },
@@ -171,37 +194,6 @@
                     },
                 },
                 "javascript": { "tsserver": { "maxTsServerMemory": 16184 } },
-            },
-        },
-        "tsgo": {
-            "settings": {
-                "typescript": {
-                    "tsserver": { "maxTsServerMemory": 16184 },
-                    "preferences": {
-                        "importModuleSpecifier": "non-relative",
-                    },
-                    "inlayHints": {
-                        "parameterNames": {
-                            "enabled": false,
-                            "suppressWhenArgumentMatchesName": true,
-                        },
-                        "parameterTypes": { "enabled": true },
-                        "variableTypes": {
-                            "enabled": false,
-                            "suppressWhenTypeMatchesName": true,
-                        },
-                        "propertyDeclarationTypes": { "enabled": true },
-                        "functionLikeReturnTypes": { "enabled": true },
-                        "enumMemberValues": { "enabled": true },
-                    },
-                },
-                "javascript": { "tsserver": { "maxTsServerMemory": 16184 } },
-            },
-        },
-        "codebook": {
-            "initialization_options": {
-                "min_word_length": 3,
-                "dictionaries": ["en_us", "en_gb", "de"],
             },
         },
         "rust-analyzer": {
