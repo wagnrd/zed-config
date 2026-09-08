@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
     // Zed
+    "text_rendering_mode": "platform_default",
     "ui_font_size": 17.0,
     "diff_view_style": "unified",
     "agent_buffer_font_size": 16.0,
