@@ -26,6 +26,7 @@
     {
         "bindings": {
             "ctrl ctrl": "text_finder::Toggle",
+            "ctrl-w": "pane::CloseActiveItem"
         },
     },
     {
@@ -41,7 +42,6 @@
             "ctrl-shift-h": "pane::ActivatePreviousItem",
             "ctrl-shift-l": "pane::ActivateNextItem",
             "ctrl-o": "outline::Toggle",
-            "ctrl-w": "pane::CloseActiveItem"
         },
     },
     {
@@ -67,6 +67,7 @@
     {
         "bindings": {
             "cmd cmd": "text_finder::Toggle",
+            "cmd-w": "pane::CloseActiveItem"
         },
     },
     {
@@ -82,7 +83,6 @@
             "cmd-shift-h": "pane::ActivatePreviousItem",
             "cmd-shift-l": "pane::ActivateNextItem",
             "cmd-o": "outline::Toggle",
-            "cmd-w": "pane::CloseActiveItem"
         },
     },
     {
