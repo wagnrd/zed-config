@@ -26,7 +26,7 @@
     {
         "bindings": {
             "ctrl ctrl": "text_finder::Toggle",
-            "ctrl-w": "pane::CloseActiveItem"
+            "ctrl-w": "pane::CloseActiveItem",
         },
     },
     {
