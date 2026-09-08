@@ -24,6 +24,11 @@
     },
     // Linux
     {
+        "bindings": {
+            "ctrl ctrl": "text_finder::Toggle",
+        },
+    },
+    {
         "context": "Editor && os != macos",
         "bindings": {
             "ctrl-space": "editor::ShowCompletions",
@@ -35,6 +40,7 @@
             "ctrl-l": "pane::GoForward",
             "ctrl-shift-h": "pane::ActivatePreviousItem",
             "ctrl-shift-l": "pane::ActivateNextItem",
+            "ctrl-o": "outline::Toggle",
         },
     },
     {
@@ -58,6 +64,11 @@
     },
     // MacOS
     {
+        "bindings": {
+            "cmd cmd": "text_finder::Toggle",
+        },
+    },
+    {
         "context": "Editor && os == macos",
         "bindings": {
             "cmd-space": "editor::ShowCompletions",
@@ -69,6 +80,7 @@
             "cmd-l": "pane::GoForward",
             "cmd-shift-h": "pane::ActivatePreviousItem",
             "cmd-shift-l": "pane::ActivateNextItem",
+            "cmd-o": "outline::Toggle",
         },
     },
     {
