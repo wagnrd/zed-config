@@ -47,7 +47,6 @@
 
     // AI
     "edit_predictions": {
-        "allow_data_collection": "no",
         "provider": "zed",
         "open_ai_compatible_api": {
             "api_url": "http://localhost:1234/v1/completions",
@@ -57,15 +56,12 @@
         }
     },
     "agent": {
-        "enable_feedback": false,
-        "threads_sidebar": {
-            "position": "right"
-        },
         "default_model": {
             "provider": "lmstudio",
             "model": "google/gemma-4-26b-a4b-qat",
             "enable_thinking": false,
         },
+        "sidebar_side": "right",
         "dock": "right",
         "tool_permissions": {
             "tools": {
@@ -83,7 +79,7 @@
             "settings": {},
         },
         "mcp-server-grafana": {
-            "enabled": false,
+            "enabled": true,
             "remote": false,
             "settings": {},
         },
@@ -92,7 +88,7 @@
         "codex-acp": {
             "default_config_options": {
                 "collaboration_mode": "default",
-                "fast-mode": true,
+                "fast-mode": false,
                 "model": "gpt-6-luna",
                 "reasoning_effort": "high",
                 "mode": "agent",
@@ -105,8 +101,8 @@
         "claude-acp": {
             "default_config_options": {
                 "mode": "auto",
-                "effort": "high",
-                "model": "opus",
+                "effort": "xhigh",
+                "model": "opus[1m]",
             },
             "type": "registry",
         },
