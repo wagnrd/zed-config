@@ -230,12 +230,7 @@
         "serve-d": {
             "settings": {
                 "d": {
-                    "enableFormatting": true,
-                    "enableDubLinting": true,
-                    "manyProjectsThreshold": 20,
                     "argumentSnippets": true,
-                    "scanAllFolders": false,
-                    "lintOnFileOpen": "project",
                 },
             },
         },
