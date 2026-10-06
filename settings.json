@@ -53,13 +53,13 @@
             "api_url": "http://localhost:1234/v1/completions",
             "model": "sweep-next-edit-1.5B",
             "prompt_format": "sweep",
-            "max_output_tokens": 512
-        }
+            "max_output_tokens": 512,
+        },
     },
     "agent": {
         "enable_feedback": false,
         "threads_sidebar": {
-            "position": "right"
+            "position": "right",
         },
         "default_model": {
             "provider": "lmstudio",
@@ -114,16 +114,13 @@
             "default_config_options": {
                 "effort": "max",
                 "model": "opencode/deepseek-v4-flash-free",
-                "mode": "build"
+                "mode": "plan",
             },
             "type": "registry",
         },
         "cursor": {
             "favorite_config_option_values": {
-                "model": [
-                    "gpt-5.6-terra",
-                    "gpt-5.6-sol"
-                ]
+                "model": ["gpt-5.6-terra", "gpt-5.6-sol"],
             },
             "default_config_options": {
                 "reasoning": "medium",
@@ -215,6 +212,30 @@
             "initialization_options": {
                 "check": {
                     "command": "clippy",
+                },
+            },
+        },
+        "json-language-server": {
+            "settings": {
+                "json": {
+                    "schemas": [
+                        {
+                            "fileMatch": ["dub.json"],
+                            "url": "https://raw.githubusercontent.com/Pure-D/dub-editor/master/json-validation/dub.schema.json",
+                        },
+                    ],
+                },
+            },
+        },
+        "serve-d": {
+            "settings": {
+                "d": {
+                    "enableFormatting": true,
+                    "enableDubLinting": true,
+                    "manyProjectsThreshold": 20,
+                    "argumentSnippets": true,
+                    "scanAllFolders": false,
+                    "lintOnFileOpen": "project",
                 },
             },
         },
